@@ -1,32 +1,145 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.head {
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.head h1 {
+  text-align: center;
+  flex-grow:8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.head button {
+  flex-grow:1;
+  -webkit-appearance: none;
+  font-size:2rem;
+  color:#4c6088;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.cal-list {
+  margin:0;
+  padding:0;
+}
+.cal-list li{
+  display:inline-block;
+  padding-top:20px;
+  vertical-align: top;
+  list-style:none;
+  width:25%;
+  text-align:center;
+}
+.calendar-wrap {
+  display: inline-block;
+  width:90%;
+}
+.calendar-table {
+  border-collapse: collapse;
+  border:none;
+  width:100%;
+}
+
+.calendar-table caption {
+  margin-bottom: 5px;
+  font-weight:bold;
+  color:#4c6088;
+}
+
+.calendar-table th {
+  background:#d9d9d9;
+  font-weight: normal;
+  color:#999a9f
+}
+
+.calendar-table td {
+  text-align:center
+}
+
+.calendar-table td a {
+  display: inline-block;
+  width:100%;
+  text-decoration:none;
+  color:#6a6866
+}
+
+.calendar-table td.today a {
+  background: #d5e0ee
+}
+
+.calendar-table td.holiday a {
+  background:#9175c5;
+  color:#fff
+}
+
+.calendar-table td.birthday a {
+  background:#b875c5;
+  color:#fff
+}
+
+.calendar-table td.busy a {
+  background:#c5b975;
+  color:#fff
+}
+
+.calendar-table td.aniversary a {
+  background:#7595c5;
+  color:#fff
+}
+
+.calendar-table td:first-child a, .calendar-table td:last-child a {
+  color:#265294
+}
+
+.mark-list ul {
+  margin:0;
+  padding:0;
+  display: flex;
+  list-style:none;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.mark-list ul li {
+  width:20%;
+  line-height: 40px;
+  text-align:center
+}
+
+.mark-list ul li label {
+  margin-left:5px;
+}
+
+.mark-list ul li:nth-child(1) {
+  background:#ddd;
+}
+
+.mark-list ul li:nth-child(2) {
+  background:#9175c5;
+  color:#fff
+}
+
+.mark-list ul li:nth-child(3) {
+  background:#b875c5;
+  color:#fff
+}
+
+.mark-list ul li:nth-child(4) {
+  background:#c5b975;
+  color:#fff
+}
+
+.mark-list ul li:nth-child(5) {
+  background:#7595c5;
+  color:#fff
+}
+
+@media screen and (max-width: 1024px) {
+  .cal-list li {width:50%}
+}
+
+@media screen and (max-width: 640px) {
+  .cal-list li {width:100%}
+  .mark-list ul {flex-direction: column}
+  .mark-list ul li {width:100%}
 }
